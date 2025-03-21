@@ -32,7 +32,7 @@ const projects: ProjectCardProps[] = [
   {
     id: '4',
     title: 'Startup Marketing Video',
-    description: 'Produced and edited a promotional video for a tech startup's product launch.',
+    description: 'Produced and edited a promotional video for a tech startup\'s product launch.',
     category: 'Video',
     image: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     link: '#'
