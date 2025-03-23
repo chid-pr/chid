@@ -5,6 +5,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Projects from '@/components/sections/Projects';
+import ContactForm from '@/components/sections/ContactForm';
 
 const Index = () => {
   useEffect(() => {
@@ -116,30 +117,7 @@ const Index = () => {
             </div>
           </section>
           
-          {/* Contact Section Placeholder */}
-          <section id="contact" className="py-20">
-            <div className="section-container">
-              <div className="max-w-2xl mx-auto text-center">
-                <span className="inline-block px-3 py-1 rounded-full bg-foreground text-background text-sm font-medium mb-4">
-                  Get In Touch
-                </span>
-                <h2 className="text-3xl md:text-4xl font-display font-semibold mb-6">
-                  Let's Work Together
-                </h2>
-                <p className="text-muted-foreground mb-8">
-                  Have a project in mind or want to learn more about my services?
-                  I'd love to hear from you.
-                </p>
-                
-                <a 
-                  href="mailto:contact@example.com" 
-                  className="button-hover inline-flex items-center justify-center rounded-lg bg-foreground text-background px-6 py-3 text-sm font-medium"
-                >
-                  Send Me an Email
-                </a>
-              </div>
-            </div>
-          </section>
+          <ContactForm />
         </motion.main>
         
         <Footer />

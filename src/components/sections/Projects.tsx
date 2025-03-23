@@ -65,7 +65,8 @@ const Projects = () => {
     if (activeCategory === 'All') {
       setFilteredProjects(projects);
     } else {
-      setFilteredProjects(projects.filter(project => project.category === activeCategory));
+      const filtered = projects.filter(project => project.category === activeCategory);
+      setFilteredProjects(filtered);
     }
   }, [activeCategory]);
   
@@ -147,12 +148,19 @@ const Projects = () => {
           whileInView="show"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          style={{ minHeight: '400px' }}
         >
-          {filteredProjects.map((project) => (
-            <motion.div key={project.id} variants={item}>
-              <ProjectCard {...project} />
-            </motion.div>
-          ))}
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project) => (
+              <motion.div key={project.id} variants={item}>
+                <ProjectCard {...project} />
+              </motion.div>
+            ))
+          ) : (
+            <div className="col-span-3 text-center py-10">
+              <p className="text-muted-foreground">No projects found for this category.</p>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
