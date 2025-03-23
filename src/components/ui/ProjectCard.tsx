@@ -24,7 +24,7 @@ const ProjectCard = ({
   
   return (
     <motion.div 
-      className="group relative rounded-xl overflow-hidden bg-white shadow-sm border border-border h-full"
+      className="group relative rounded-xl overflow-hidden bg-card text-card-foreground shadow-sm border border-border h-full"
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
       onMouseEnter={() => setIsHovered(true)}
@@ -53,13 +53,13 @@ const ProjectCard = ({
             {category}
           </span>
         </div>
-        <h3 className="text-xl font-display font-medium mb-2">{title}</h3>
+        <h3 className="text-xl font-display font-medium mb-2 text-card-foreground">{title}</h3>
         <p className="text-muted-foreground text-sm mb-4">{description}</p>
         
         {link && (
           <a 
             href={link} 
-            className="inline-flex items-center text-sm font-medium text-foreground hover:underline"
+            className="inline-flex items-center text-sm font-medium text-card-foreground hover:underline"
             target="_blank" 
             rel="noopener noreferrer"
           >

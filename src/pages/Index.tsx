@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Projects from '@/components/sections/Projects';
 import ContactForm from '@/components/sections/ContactForm';
+import { Card } from '@/components/ui/card';
 
 const Index = () => {
   useEffect(() => {
@@ -42,33 +43,33 @@ const Index = () => {
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Service cards would go here */}
-                <div className="p-6 rounded-xl bg-white shadow-sm border border-border">
+                {/* Service cards using Card component for proper dark mode support */}
+                <Card className="p-6">
                   <h3 className="text-xl font-display font-medium mb-3">
                     Web Development
                   </h3>
                   <p className="text-muted-foreground">
                     Custom websites and web applications built with modern technologies.
                   </p>
-                </div>
+                </Card>
                 
-                <div className="p-6 rounded-xl bg-white shadow-sm border border-border">
+                <Card className="p-6">
                   <h3 className="text-xl font-display font-medium mb-3">
                     DevOps Consulting
                   </h3>
                   <p className="text-muted-foreground">
                     Cloud infrastructure, CI/CD pipelines, and deployment strategies.
                   </p>
-                </div>
+                </Card>
                 
-                <div className="p-6 rounded-xl bg-white shadow-sm border border-border">
+                <Card className="p-6">
                   <h3 className="text-xl font-display font-medium mb-3">
                     Creative Services
                   </h3>
                   <p className="text-muted-foreground">
                     Design, video production, and marketing materials for your brand.
                   </p>
-                </div>
+                </Card>
               </div>
             </div>
           </section>
