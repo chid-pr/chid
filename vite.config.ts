@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: '/chid/', // Replace with your actual GitHub repo name
   plugins: [
     react(),
     mode === 'development' &&
