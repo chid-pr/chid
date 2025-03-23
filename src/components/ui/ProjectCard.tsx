@@ -31,7 +31,7 @@ const ProjectCard = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Project Image with Overlay */}
-      <div className="relative aspect-[16/9] overflow-hidden">
+      <div className="relative aspect-[16/9] overflow-hidden image-glow">
         <img 
           src={image} 
           alt={title}
